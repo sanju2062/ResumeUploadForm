@@ -26,7 +26,7 @@ function App() {
       <div className="App">
         <h1 className="title">Welcome To Kodusware</h1>
         <Routes>
-          <Route path="/" Component={Form} />
+          <Route path="/" element={<Form />} />
           <Route
             path="/admin"
             element={
