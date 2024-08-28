@@ -22,24 +22,22 @@ function App() {
   }, [isAuth]);
 
   return (
-    <BrowserRouter>
-      <div className="App">
-        <h1 className="title">Welcome To Kodusware</h1>
-        <Routes>
-          <Route path="/" element={<Form />} />
-          <Route
-            path="/admin"
-            element={
-              isAuth ? (
-                <Responses />
-              ) : (
-                <Auth credentials={credentials} setIsAuth={setIsAuth} />
-              )
-            }
-          />
-        </Routes>
-      </div>
-    </BrowserRouter>
+    <div className="App">
+      <h1 className="title">Welcome To Kodusware</h1>
+      <Routes>
+        <Route path="/" element={<Form />} />
+        <Route
+          path="/admin"
+          element={
+            isAuth ? (
+              <Responses />
+            ) : (
+              <Auth credentials={credentials} setIsAuth={setIsAuth} />
+            )
+          }
+        />
+      </Routes>
+    </div>
   );
 }
 
